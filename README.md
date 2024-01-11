@@ -43,6 +43,7 @@
 <p>System for police stations that allows adding, updating case files and criminal records, This Crime Information Management System is a simple console based project that gives you the information of all the crimes happened in a particular location, all the stats on solved and unsolved crimes in particular area .</p>
 
 ## Thanks for visiting. 
+## Source code: https://github.com/Ranjanji/Crime-Management-System.git 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
