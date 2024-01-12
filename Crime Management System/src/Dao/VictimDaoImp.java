@@ -21,7 +21,7 @@ public class VictimDaoImp implements VictimDao{
 		
 		try(Connection conn=DButil.ProvideConnection()){
 			
-			PreparedStatement ps =  conn.prepareStatement("select v.name, v.age, v.gender, v.address, c.description from victimofcrime vc INNER JOIN crime c INNER JOIN victim v ON vc.victimid = v.victimid AND c.crimeid = vc.crimeid where c.crimeid = ?;");
+			PreparedStatement ps =  conn.prepareStatement("select v.name, v.age, v.gender, v.address, c.description from victim_of_crime vc INNER JOIN crime c INNER JOIN victim v ON vc.victimid = v.victimid AND c.crimeid = vc.crimeid where c.crimeid = ?;");
 			ps.setInt(1, crimeId);
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {

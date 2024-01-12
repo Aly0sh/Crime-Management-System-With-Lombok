@@ -110,7 +110,7 @@ public class CriminalDaoImp implements CriminalDao{
 		List<CriminalsCrimeDto> criminals = new ArrayList<>();
 		
 		try(Connection conn = ConnectionClass.getConnection()){
-			PreparedStatement ps = conn.prepareStatement("select cr.name, cr.age, cr.gender, cr.address, cr.mark, c.description from criminalsofcrime coc inner join criminal cr inner join crime c on coc.criminalid = cr.criminalid and coc.crimeid = c.crimeid where c.crimeid = ?;");
+			PreparedStatement ps = conn.prepareStatement("select cr.name, cr.age, cr.gender, cr.address, cr.mark, c.description from criminals_of_crime coc inner join criminal cr inner join crime c on coc.criminalid = cr.criminalid and coc.crimeid = c.crimeid where c.crimeid = ?;");
 			ps.setInt(1, crimeId);
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {

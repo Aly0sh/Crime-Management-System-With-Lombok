@@ -17,8 +17,8 @@ create table Criminal(
 	policeStationId  int not null,
 	mark varchar(255) not null
 );
-insert into criminal values(10 ,'Chaman',20,'Male','Chennai',12,12,'cut on face');
- insert into criminal values(11 ,'Raju',25,'Male','Delhi',11,12,'Have One hand');
+insert into criminal values(10 ,'Chaman',20,'Male','Chennai',12,'cut on face');
+ insert into criminal values(11 ,'Raju',25,'Male','Delhi',11,'Have One hand');
 
 
 create table Criminals_of_Crime(
@@ -27,7 +27,7 @@ create table Criminals_of_Crime(
     foreign key (criminalid) references Criminal(criminalid),
     foreign key (crimeid) references Crime(crimeid) 
 );
-insert into Criminals_of_Crime values(11,101);
+insert into Criminals_of_Crime values(11,102);
 
 create table Victim(
     victimid int primary key auto_increment,
