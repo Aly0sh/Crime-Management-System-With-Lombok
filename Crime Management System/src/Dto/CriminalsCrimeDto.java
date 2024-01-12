@@ -1,21 +1,24 @@
 package Dto;
 
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.FieldDefaults;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class CriminalsCrimeDto {
-	private String criminalName;
-	private int age;
-	private String gender;
-	private String mark;
-	private String address;
-	private String description;
+	String criminalName;
+	int age;
+	String gender;
+	String mark;
+	String address;
+	String description;
 	
 	@Override
 	public String toString() {
